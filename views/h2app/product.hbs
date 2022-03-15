@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+
+    <!-- FONT GOOGLE -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/css/product.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header__content">
+        <a href="/h2app/index" class="header__brand">H2<span>Application</span></a>
+        <ul class="header__nav">
+          <li>
+            <a href="/h2app/index">Home</a>
+          </li>
+          <li>
+            <a href="#">My Movies</a>
+          </li>
+          <li>
+            <a href="#">
+              Browse
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="header__subnav">
+              <ul>
+                <li><a href="#">Recommendations</a></li>
+                <li><a href="#">Choice Awards</a></li>
+                <li><a href="#">Giveaways</a></li>
+                <li><a href="#">New Releases</a></li>
+                <li><a href="#">Lists</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">News & Interviews</a></li>
+              </ul>
+              <ul>
+                <li>
+                  <h3>FAVORITE GENRES</h3>
+                </li>
+                <li><a href="#">Fiction</a></li>
+                <li><a href="#">Manga</a></li>
+                <li><a href="#">All Genres</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              Community
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="header__subnav">
+              <ul>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Quotes</a></li>
+                <li><a href="#">Ask the Author</a></li>
+                <li><a href="#">Trivia</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="#">Creative Writing</a></li>
+                <li><a href="#">People</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <form class="header__search">
+          <input type="search" name="searchBook" placeholder="Search box" />
+          <button type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+          <div class="header__history">
+            <div class="header__history-container">
+              <div class="header__history-item">
+                <a href="#" class="header__history-link">
+                  <img src="/uploads/{{recommend.img}}" alt="" />
+                  <div class="header__history-detail">
+                    <h3>
+                      Harry Portter and the Sorcer's Stone (Harry Porter, #1)
+                    </h3>
+                    <p>by J.K. Rowling</p>
+                  </div>
+                </a>
+              </div>
+              <div class="header__history-item">
+                <a href="#" class="header__history-link">
+                  <img src="/uploads/{{recommend.img}}" alt="" />
+                  <div class="header__history-detail">
+                    <h3>
+                      {{recommend.title}}
+                    </h3>
+                    <p>by J.K. Rowling</p>
+                  </div>
+                </a>
+              </div>
+              <div class="header__history-item">
+                <a href="#" class="header__history-link">
+                  <img src="/uploads/book3.jpg" alt="" />
+                  <div class="header__history-detail">
+                    <h3>
+                      Harry Potter and the Prisoner of Azkaban (Harry Potter #3)
+                    </h3>
+                    <p>by J.K. Rowling</p>
+                  </div>
+                </a>
+              </div>
+              <div class="header__history-item">
+                <a href="#" class="header__history-link">
+                  <img src="/uploads/book4.jpeg" alt="" />
+                  <div class="header__history-detail">
+                    <h3>
+                      Harry Potter and the Order of the Phoenix (Harry Potter
+                      #5)
+                    </h3>
+                    <p>by J.K. Rowling</p>
+                  </div>
+                </a>
+              </div>
+              <div class="header__history-item">
+                <a href="#" class="header__history-link">
+                  <img src="/uploads/book5.jpg" alt="" />
+                  <div class="header__history-detail">
+                    <h3>
+                      Harry Potter and the Chamber of Secrets (Harry Potter #2)
+                    </h3>
+                    <p>by J.K. Rowling</p>
+                  </div>
+                </a>
+              </div>
+              <div class="header__history-item">
+                <a href="#" class="header__history-link">
+                  <img src="/uploads/book6.jpg" alt="" />
+                  <div class="header__history-detail">
+                    <h3>
+                      Harry Potter and the Goblet of Fire (Harry Potter #4)
+                    </h3>
+                    <p>by J.K. Rowling</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="header__history-all">
+              <a href="#">See all results</a>
+            </div>
+          </div>
+        </form>
+        <ul class="header__personal-nav">
+          <li>
+            <a href="#">
+              <i class="fa fa-bell"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-comments"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-users"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/uploads/user.png" alt="User" />
+            </a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="main__container">
+        <div class="main__content">
+          <div class="main__left">
+            <!-- MAIN BOOK -->
+            <div class="main__book section">
+              <div class="main__book-cover">
+                <img src="/uploads/{{recommend.img}}" alt="" />
+                <button class="wtr-btn" type="button">
+                  Want to Watch
+                  <span><i class="fa fa-angle-down"></i></span>
+                </button>
+                <div class="main__book-rate">
+                  <p>Rate this movie</p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="main__book-detail">
+                <h1 class="book__name">
+                  {{recommend.title}}
+                </h1>
+                <a href="#" class="book__series">{{recommend.title}}</a>
+                <p class="book__author">by <a href="#">Jodi Taylor</a></p>
+                <div class="book__rate">
+                  <p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-alt"></i>
+                    4.5
+                  </p>
+                  <p class="book__rate-detail">
+                    <span>Rating details:</span>
+                    <span>&bull;</span>
+                    <span>7,995,093 ratings</span>
+                    <span>&bull;</span>
+                    <span>125,997 reviews</span>
+                  </p>
+                </div>
+                <p class="book__description">
+                  Harry Potter's life is miserable. His parents are dead and
+                  he's stuck with his heartless relatives, who force him to live
+                  in a tiny closet under the stairs. But his fortune changes
+                  when he receives a letter that tells him the truth about
+                  himself: he's a wizard. A mysterious visitor rescues him from
+                  his relatives and takes him to his new home, Hogwarts School
+                  of Witchcraft and Wizardry.
+                </p>
+                <div class="seperate mt-10"></div>
+                <div class="book__buy">
+                  <h3 class="title">get a copy</h3>
+                  <ul class="book__buy-method">
+                    <li><a href="#">Amazon</a></li>
+                    <li>
+                      <a href="#"
+                        >Online Store <i class="fa fa-angle-down"></i>
+                      </a>
+                      <ul class="onlineStore">
+                        <li><a href="#">Audible</a></li>
+                        <li><a href="#">Barner & Noble</a></li>
+                        <li><a href="#">Walmart Movies</a></li>
+                        <li><a href="#">Google Play</a></li>
+                        <li><a href="#">Abemovies</a></li>
+                        <li><a href="#">Movies Depository</a></li>
+                        <li><a href="#">Alibris</a></li>
+                        <li><a href="#">Indigo</a></li>
+                        <li><a href="#">Better World Movies</a></li>
+                        <li><a href="#">IndieBound</a></li>
+                        <li><a href="#">Thriffmovies</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="book__info">
+                  <p>Hardcover, Library Edition, 309 pages</p>
+                  <p>
+                    Published November 1st 2003 by Scholastic Inc
+                    <span>(first published June 26th 1997)</span>
+                  </p>
+                  <div class="book__info-btn">
+                    <a href="#">More Details...</a>
+                    <a href="#">Edit Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- FRIEND REVIEWS -->
+            <div class="friend__reviews section">
+              <h3 class="title">Friend Reviews</h3>
+              <div class="seperate"></div>
+              <p>
+                None of your friends have reviewed this movie yet.
+                <a href="#">Ask them &rsaquo;&rsaquo;</a>
+              </p>
+            </div>
+            <!-- READER Q&A -->
+            <div class="readerQA section">
+              <h3 class="title">USER Q&A</h3>
+              <div class="seperate"></div>
+              <div class="ask__container">
+                <h4>
+                  Ask the H2Application community a question about
+                  <span>Harry Potter and the Sorcerer's Stone</span>
+                </h4>
+                <div class="ask__content">
+                  <img src="/uploads/user.png" alt="" />
+                  <form>
+                    <textarea
+                      name="ask"
+                      placeholder="Ask anything about the movie"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                    <button type="submit">Ask</button>
+                  </form>
+                </div>
+                <h4>Popular Answer Question</h4>
+                <div class="popular__question">
+                  <a href="#" class="popular__title"
+                    >I have watched all the Harry Potter films loads of times
+                    and I love them but is it worth it reading the movies if I
+                    know what is going to happen?</a
+                  >
+                  <div class="popular__info">
+                    <a href="#">
+                      195 Likes
+                      <span>&bull;</span>
+                    </a>
+                    <a href="#">
+                      Like
+                      <span>&bull;</span>
+                    </a>
+
+                    <a href="#">
+                      1 Years Ago
+                      <span>&bull;</span>
+                    </a>
+                    <a href="#"> See All 184 Answers </a>
+                    <div class="popular__detail">
+                      <img
+                        src="/uploads/userAsk1.jpeg"
+                        alt=""
+                        class="popular__avatar"
+                      />
+                      <div class="popular__content">
+                        <a href="#" class="popular__name">Nguyen Quoc Anh</a>
+                        <p class="popular__respond">
+                          The movies were quite good but the magic that's in the
+                          movie just isn't there. I'm a huge HP fan and I'm
+                          pretty sure about this. Hope this helps!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popular__question">
+                  <a href="#" class="popular__title"
+                    >I have watched all the Harry Potter films loads of times
+                    and I love them but is it worth it reading the movies if I
+                    know what is going to happen?</a
+                  >
+                  <div class="popular__info">
+                    <a href="#">
+                      126 Likes
+                      <span>&bull;</span>
+                    </a>
+                    <a href="#">
+                      Like
+                      <span>&bull;</span>
+                    </a>
+
+                    <a href="#">
+                      1 Years Ago
+                      <span>&bull;</span>
+                    </a>
+                    <a href="#"> See All 22 Answers </a>
+                    <div class="popular__detail">
+                      <img
+                        src="/uploads/userAsk2.jpeg"
+                        alt=""
+                        class="popular__avatar"
+                      />
+                      <div class="popular__content">
+                        <a href="#" class="popular__name">Hoa An</a>
+                        <p class="popular__respond">
+                          I once heard an interview with someone saying that it
+                          was changed because they didn't think American
+                          children would want to watch it as much if it had a
+                          long word like "Philosopher" in it. They thought
+                          "Sorcerer" would better catch the attention of young,
+                          American users.<br /><br />Oh, see this. This is
+                          hilarious. Apparently it is necessary now to change
+                          all of the movies for American users:<br /><br />I
+                          found this on Tumblr. The link wouldn't connect here
+                          for some reason.<br /><br />Since They changed
+                          Philosopher's Stone to Sorcerer's Stone for America, I
+                          decided to change the rest since us Americans are too
+                          dumb to understand the word philosopher:
+                          <br />the-absolute-funniest-posts:<br /><br /><br />Harry
+                          Potter and The Whisper Snake Place<br /><br />Harry
+                          Potter and That Mean Jail Man<br /><br />Harry Potter
+                          and The Hot Cup<br /><br />Harry Potter and The Bird
+                          Club<br /><br />Harry Potter and The Guy With Only
+                          Some Blood<br /><br />Harry Potter and Death<br />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="#"
+                >See all 572 questions about Harry Potter and the Sorcerer's
+                Stone…</a
+              >
+            </div>
+            <!-- LIST BOOKS -->
+            <div class="listBooks">
+              <h3 class="title">list with this movie</h3>
+              <div class="seperate"></div>
+              <div class="listBooks__container">
+                <div class="listBooks__item">
+                  <a href="#" class="listBooks__preview">
+                    <img src="/uploads/listBooks1.jpg" />
+                    <img src="/uploads/listBooks2.jpg" />
+                    <img src="/uploads/listBooks3.jpg" />
+                    <img src="/uploads/listBooks4.jpg" />
+                    <img src="/uploads/listBooks5.jpg" />
+                  </a>
+                  <a href="#" class="listBooks__name">Best Young Adult Movies</a>
+                  <p class="listBooks__info">11,760 movies — 82,275 votes</p>
+                </div>
+                <div class="listBooks__item">
+                  <a href="#" class="listBooks__preview">
+                    <img src="/uploads/listBooks6.jpg" />
+                    <img src="/uploads/listBooks7.jpg" />
+                    <img src="/uploads/listBooks8.jpg" />
+                    <img src="/uploads/listBooks9.jpg" />
+                    <img src="/uploads/listBooks10.jpg" />
+                  </a>
+                  <a href="#" class="listBooks__name"
+                    >Movies That Everyone Should Watch At Least Once</a
+                  >
+                  <p class="listBooks__info">24,220 movies — 103,565 voters</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__right">
+            <!-- SHARE -->
+            <div class="share">
+              <div class="share__content">
+                <div class="share__btn">
+                  <i class="fa fa-share"></i>
+                  <a href="#">Share</a>
+                </div>
+                <div class="share__socials">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- CAROUSEL -->
+            <div class="carousel section">
+              <h3 class="title">Users also enjoyed</h3>
+              <div class="carousel__container">
+                <div class="carousel__slide">
+                  {{#each recommend1}}
+                    <a href="#"
+                      ><img src="/uploads/{{img}}" alt=""
+                    /></a>
+                  {{/each}}
+                </div>
+                <div class="carousel__btn">
+                  <button type="button" id="prevBtn" disabled="true ">
+                    <i class="fa fa-angle-left"></i>
+                  </button>
+                  <button type="button" id="nextBtn">
+                    <i class="fa fa-angle-right"></i>
+                  </button>
+                </div>
+              </div>
+              <a href="#">See smiliar movies...</a>
+            </div>
+            <!-- GENRES -->
+            <div class="genres section">
+              <h3 class="title">Genres</h3>
+              <div class="seperate"></div>
+              <ul class="geners__content">
+                <li class="genres__item">
+                  <a href="#">Fantasy</a>
+                  <span>67,275 users</span>
+                </li>
+                <li class="genres__item">
+                  <a href="#">Fiction</a>
+                  <span>20,064 users</span>
+                </li>
+                <li class="genres__item">
+                  <a href="#">Young Adult</a>
+                  <span>19,375 users</span>
+                </li>
+                <li class="genres__item">
+                  <a href="#">Childrens</a>
+                  <span>5,399 users</span>
+                </li>
+                <li class="genres__item">
+                  <a href="#">Adventure</a>
+                  <span>5,001 users</span>
+                </li>
+                <li class="genres__item">
+                  <a href="#">Classics</a>
+                  <span>3,876 users</span>
+                </li>
+                <li class="genres__item">
+                  <a href="#">Audiobook</a>
+                  <span>3,096 users</span>
+                </li>
+                <li class="genres__item">
+                  <a href="#">Science Fiction Fantasy</a>
+                  <span>2,798 users</span>
+                </li>
+              </ul>
+            </div>
+            <!-- AUTHOR -->
+            <div class="author section">
+              <a href="#" class="title">about J.K.Rowling</a>
+              <div class="seperate"></div>
+              <div class="author__content">
+                <a href="#" class="author__avatar"></a>
+                <div class="author__info">
+                  <p class="book__author"><a href="#">J.K. Rowling</a></p>
+                  <p class="author__followers">215,982 followers</p>
+                  <button class="author__follow-btn" type="button">
+                    Follow Author
+                  </button>
+                </div>
+              </div>
+              <p class="author__description">
+                See also: <a href="#" class="seeAlso">Robert Galbraith</a>
+                <br />Although she writes under the pen name
+                <b>J.K. Rowling</b>, pronounced like <i>rolling</i>, her name
+                when her first <i>Harry Potter</i> movie was published was simply
+                <b>Joanne Rowling</b>. Anticipating that the target audience of
+                young boys might not want to watch a movie written by a woman, her
+                publishers demanded that she use two initials, rather than her
+                full name. As she had no middle name, she chose <b>K</b> as the
+                second initial of her pen name, from her paternal grandmother
+                Kathleen Ada Bulgen Rowling. She calls herself <b>Jo</b> and has
+                said, "No one ever called me 'Joanne' when I was young, unless
+                they were angry." Following her marriage, she has sometimes used
+                the name <b>Joanne Murray</b> when conducting personal business.
+                During the Leveson Inquiry she gave evidence under the name of
+                <b>Joanne Kathleen Rowling</b>. In a 2012 interview, Rowling
+                noted that she no longer cared that people pronounced her name
+                incorrectly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer__content">
+        <div class="footer__first">
+          <div class="footer__company">
+            <h3 class="title">Company</h3>
+            <ul>
+              <li class="li">
+                <a href="#">About us</a>
+              </li>
+              <li class="li">
+                <a href="#">Careers</a>
+              </li>
+              <li class="li">
+                <a href="#">Terms</a>
+              </li>
+              <li class="li">
+                <a href="#">Privacy</a>
+              </li>
+              <li class="li">
+                <a href="#">Interest Based Ads</a>
+              </li>
+              <li class="li">
+                <a href="#">Ad Preferences</a>
+              </li>
+              <li class="li">
+                <a href="#">Help</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__work">
+            <h3 class="title">Connect</h3>
+            <div class="footer__socials">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"> <i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer__connect">
+            <h3 class="title">work with us</h3>
+            <ul>
+              <li><a href="#">Authors</a></li>
+              <li><a href="#">Advertise</a></li>
+              <li><a href="#">Authors & ads blog</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__second">
+          <div></div>
+          <div>
+            <div class="footer__download">
+              <a href="#">
+                <img
+                  src="/uploads/downloadAppStore.svg"
+                  alt="Download App Store"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="/uploads/downloadGooglePlay.png"
+                  alt="Download Google Play"
+                />
+              </a>
+            </div>
+            <div class="footer__copyright">
+              <small>&copy; 2021 Goodreads, Inc.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MAIN JS -->
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

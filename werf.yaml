@@ -1,0 +1,8 @@
+project: service1
+configVersion: 1
+---
+image: service1
+dockerfile: Dockerfile
+args:
+  GIT_SSH_PRIVATE_KEY: |-
+{{ env "GIT_SSH_PRIVATE_KEY" | indent 4 }}
