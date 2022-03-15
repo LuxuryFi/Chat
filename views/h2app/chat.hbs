@@ -53,7 +53,32 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
     // Load message from db
+    axios.get('/h2app/message').then(res => {
+        axios.get('/h2app/userInfo').then(user => {
+           for (const item of res.data) {
+               if (user && user.data.username === item.sender) {
+                   $('#chat').append(`
+                    <div class="row-sender">
+                        <div class="sender message bg-info">
+                            <strong>${item.sender}</strong>:
+                            ${item.message}
+                        <div>
+                    <div>
+                     `);
+               } else if (user && user.data.username === item.receiver) {
+                   $('#chat').append(`
+                    <div class="row-receiver">
+                        <div class="receiver message bg-light">
+                            <strong>${item.sender}</strong>:
+                            ${item.message}
+                        <div>
+                    <div>
+                    `);
+               }
 
+            }
+        });
+    });
     let client;
     // Init socket
     const socket = new WebSocket('ws://localhost:2021');
